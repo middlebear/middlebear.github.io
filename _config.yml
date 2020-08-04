@@ -1,0 +1,239 @@
+###################
+# Site settings
+###################
+title:              Middle Bear
+subtitle:           likes things just right.
+tagline:            finding the Middle Way™
+description: >-
+  For the middle bears in all of us | middlebear.org
+  Middle bears like things not too hot, not too cold, but just right. We want the best in life, and we know the best is in balance, not in the extremes.
+author:             middlebear
+email:              
+baseurl:            ""
+url:                https://middlebear.github.io
+logo:               "/assets/images/middlebear-kaomoji.jpg"
+lang:               
+timezone:           America/Los_Angeles
+date_format:        
+
+
+
+###################
+# Build settings
+###################
+theme:              jekyll-theme-editorial
+remote_theme:       middlebear/jekyll-theme-editorial
+permalink:          /:collection/:title:output_ext
+lsi:                
+page_excerpts:      
+
+
+
+###################
+# Collections
+###################
+collections:
+  people:
+    output:         true
+  pages:
+    output:         true
+  projects:
+    output:         true
+
+
+
+###################
+# Theme settings
+###################
+contact:
+  name:             "Middle Bear"
+  heading:          "Get in touch"
+  message:          "Hey, give us a ping, won't you?"
+  email_key:        
+  obfuscated_email: 
+  phone:            
+  address:
+    line1:          
+    city:           "Los Angeles"
+    state:          "CA"
+    zipcode:        
+image_path:         '/assets/images/'
+script_path:        '/assets/js/'
+style_path:         '/assets/css/'
+show:
+  authors:          false
+  post_authors:     true
+  page_authors:     false
+  project_authors:  false
+  search:           false
+  contact:          true
+  email_address:    true
+  newsletter:       false
+  comments:         true
+  alt_archive_links: false
+  more_button:      false
+include_summary:    [projects]
+exclude_dates:      [people, pages]
+related_posts_limit: 4
+comments:
+  form_action:      
+  email_title:      "Send us a message!"
+  contact_text:     "Send a message"
+  max_nesting:      3
+  allow_markdown:   true
+  add_comment_message: # "Hey! Comment here!"
+analytics:
+  goatcounter:
+    code:           middlebear
+    allow_local:    false
+staticman_url:      https://middlebear-staticman.herokuapp.com/v2/entry/middlebear/middlebear/master/comments
+search:
+  url:              "/search"
+  form_method:      "post"
+  field_id:         "query"
+  field_name:       "search"
+  placeholder:      "Search"
+scripts:
+  - file: jquery.min.js
+  - file: browser.min.js
+  - file: breakpoints.min.js
+  - file: util.js
+  - file: main.js
+  - file: email-obfuscation.js
+  - file: comments.js
+
+
+
+###################
+# Page Defaults
+###################
+defaults:
+  - scope:
+      path:         ""
+    values:
+      layout:       "default"
+      type:         "pages"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "posts"
+      image:        /assets/images/default-card.png
+    values:
+      layout:       "post"
+      menus:        'posts'
+      body_class:   "post"
+      type:         "posts"
+      image_path:   "/assets/images/"
+      author_bio:   "<p>We're still working on a fabulous author bio and page. Check back later to learn more!</p>"
+      comments:     true
+      published:    true
+  - scope:
+      path:         ""
+      type:         "people"
+    values:
+      layout:       "author"
+      menus:        'authors'
+      type:         "authors"
+      image_path:   "/assets/images/"
+      author_bio:   "<p>We're still working on a fabulous author bio and page. Check back later to learn more!</p>"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+      type:         "pages"
+      image_path:   "/assets/images/"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "projects"
+    values:
+      layout:       "project"
+      menus:        'projects'
+      type:         "projects"
+      image_path:   "/assets/images/"
+      permalink:    /policies/:title:output_ext
+      comments:     true
+      published:    false
+  - scope:
+      path:         "/assets/images"
+    values:
+      image:        true
+
+
+
+###################
+# Plugins
+###################
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  # - jekyll-mentions
+  # - jekyll-sitemap
+  # - jemoji
+
+
+###################
+# Jekyll Feed
+###################
+feed:
+  excerpt_only:     true
+  collections:
+  categories:
+
+
+###################
+# Jekyll Mentions
+###################
+jekyll-mentions:    /people
+
+
+###################
+# Jekyll Paginate - https://jekyllrb.com/docs/pagination/
+###################
+# paginate:           12
+paginate_path:      "/posts/:num/"
+
+
+###################
+# Jekyll Hashtags (unsupported by github pages)
+###################
+jekyll-hashtags:
+  base_url:         /tags
+
+
+###################
+# Jekyll Archives (unsupported by github pages)
+###################
+archives_root:      '/'
+jekyll-archives:
+  enabled:          [month, year, categories, tags]
+  layouts:
+    month:          archive
+    year:           archive
+    category:       category
+    tag:            tag
+  permalinks:
+    month:          '/:year/:month/'
+    year:           '/:year/'
+    tag:            '/tags/:name/'
+    category:       '/categories/:name/'
+
+
+###################
+# Jekyll SEO Tag
+###################
+twitter:
+  username:         middlebear2
+  card:             summary
+social:
+  name:             "Middle Bear"
+  links:
+    - https://twitter.com/middlebear2
+    - https://gravatar.com/middlebear2
+    - https://github.com/middlebear
+    - https://rubygems.org/profiles/middlebear

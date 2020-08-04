@@ -1,0 +1,43 @@
+comments:
+  allowedFields:    ["name", "email", "message", "parent_id", "page_url", "parent_fragment"]
+
+  requiredFields:   ["name", "message"]
+
+  generatedFields:
+    date:
+      type:         date
+      options:
+        format:     "iso8601"
+
+  transforms:
+    email:          md5
+
+  branch:           master
+  commitMessage:    "{fields.name}'s comment on {options.slug}"
+
+  moderation:       true
+  pullRequestBody:  "Dear human,\n\nHere's a new entry for your approval. :tada:\n\nMerge the pull request to accept it, or close it to send it away.\n\n:heart: Your friend [Staticman](https://staticman.net) :muscle:\n\n---\n"
+
+  path:             "_data/comments/{options.type}/{options.slug}"
+  filename:         "{@date:YYYYMMDDhhmmss}-{fields.name}"
+
+  format:           "yml"
+  extension:        "yml"
+
+  name:             "Middlebear"
+  notifications:
+    enabled:        false
+
+  akismet:
+    enabled:        false
+    author:         ""
+    authorEmail:    ""
+    authorUrl:      ""
+    content:        ""
+    type:           "comment"
+
+  reCaptcha:
+    enabled:        false
+
+  githubAuth:
+    required:       false

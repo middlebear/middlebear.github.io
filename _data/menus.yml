@@ -1,0 +1,13 @@
+sidebar:
+  - url:        /
+    title:      Home
+    identifier: home
+    weight:     1
+  - url:        /about
+    title:      About
+    identifier: about
+    weight:     10
+  - url:        /posts
+    title:      Recent Posts
+    identifier: posts
+    weight:     20
